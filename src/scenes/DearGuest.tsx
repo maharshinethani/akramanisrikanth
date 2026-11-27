@@ -12,7 +12,7 @@ export function DearGuest() {
 
   return (
     <section
-      className="relative flex min-h-[88svh] items-center justify-center overflow-hidden sm:min-h-screen"
+      className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden"
       aria-label="Thank you note"
     >
       {/* Full-frame background image without heavy mobile zoom */}
@@ -36,7 +36,11 @@ export function DearGuest() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(212,175,55,0.14),transparent_65%)]" />
       <div className="film-grain" />
 
-      <div className="relative z-10 mx-auto w-full max-w-md px-5 py-20 text-center sm:px-6 sm:py-28">
+      {/* Top spacer for vertical centering */}
+      <div className="hidden sm:block sm:h-6" />
+
+      {/* Main Thank You Card */}
+      <div className="relative z-10 mx-auto my-auto w-full max-w-md px-5 py-16 text-center sm:px-6 sm:py-20">
         <Reveal>
           <div className="rounded-[28px] border border-gold-soft/45 bg-royal-darkest/60 p-2 shadow-2xl backdrop-blur-md">
             <div className="rounded-[22px] border border-gold-soft/30 px-6 py-10 sm:px-8 sm:py-12">
@@ -88,6 +92,49 @@ export function DearGuest() {
           </div>
         </Reveal>
       </div>
+
+      {/* ================= ROYAL BLUE FOOTER ================= */}
+      <footer className="relative z-20 w-full border-t border-sky-400/25 bg-gradient-to-r from-[#07152b]/90 via-[#0b2246]/95 to-[#07152b]/90 px-4 py-5 shadow-[0_-10px_30px_rgba(3,12,28,0.6)] backdrop-blur-md sm:py-6">
+        <div className="mx-auto flex max-w-lg flex-col items-center text-center">
+          {/* Blue accent divider */}
+          <div className="mb-2 flex items-center gap-2">
+            <span className="h-[1px] w-8 bg-gradient-to-r from-transparent to-sky-400/60" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-sky-400" />
+            <span className="h-[1px] w-8 bg-gradient-to-l from-transparent to-sky-400/60" />
+          </div>
+
+          <p className="font-body text-[9px] font-medium uppercase tracking-[0.28em] text-sky-200/70 sm:text-[10px]">
+            Website Crafted By
+          </p>
+
+          <a
+            href="https://rcmverse.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 font-display text-sm font-semibold tracking-[0.16em] text-sky-300 transition-colors duration-300 hover:text-white sm:text-base"
+          >
+            RCM DIGITAL SOLUTIONS
+          </a>
+
+          <div className="mt-2.5 flex flex-wrap items-center justify-center gap-2.5 text-[11px] text-sky-100/80 sm:text-xs">
+            <a
+              href="https://rcmverse.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-sky-400/30 bg-sky-500/10 px-3.5 py-1 transition-all hover:border-sky-300 hover:bg-sky-500/20 hover:text-white"
+            >
+              rcmverse.netlify.app
+            </a>
+
+            <a
+              href="tel:+918500708626"
+              className="rounded-full border border-sky-400/30 bg-sky-500/10 px-3.5 py-1 transition-all hover:border-sky-300 hover:bg-sky-500/20 hover:text-white"
+            >
+              +91 85007 08626
+            </a>
+          </div>
+        </div>
+      </footer>
     </section>
   );
 }
